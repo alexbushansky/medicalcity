@@ -1,0 +1,7 @@
+{
+    "require": {
+        "larapack/dd": "^1.1",
+        "twig/twig": "^2.12",
+        "robmorgan/phinx": "^0.11.1"
+    }
+}
