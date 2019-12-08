@@ -2,9 +2,9 @@
 
 
 namespace core\controllers;
+use \globals\GlobalController;
 
-
-class PatientController
+class PatientController extends MainController
 {
     public function index()
     {

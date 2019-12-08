@@ -42,12 +42,12 @@ if (array_key_exists($sectionsKey, $routes)) {
 
 
 
-if (file_exists($file)) {
+if (file_exists(_ROOT.$file)) {
 
-    require_once $file;
+    require_once _ROOT.$file;
 
     if (class_exists($class) && method_exists($class, $method)) {
         $temp =  new $class;
-        $temp->$method();
+        $html = $temp->$method();
     }
 }

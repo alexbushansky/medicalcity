@@ -2,9 +2,9 @@
 
 
 namespace core\controllers;
+use \globals\GlobalController;
 
-
-class StaffController
+class StaffController extends MainController
 {
     public function index()
     {
