@@ -8,6 +8,6 @@ class StaffController
 {
     public function index()
     {
-        echo "staff";
+        echo ARGUMENT;
     }
 }
