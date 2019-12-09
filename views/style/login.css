@@ -1,0 +1,118 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+@font-face {
+    font-family: "Bahn";
+    src: url("../fonts/bahnschrift.ttf");
+}
+
+.main-login
+{
+    background: url("../img/LoginBackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+
+}
+
+.center
+{
+    width: 600px;
+    margin: 0 auto;
+    min-height: 300px;
+
+}
+
+
+.logo
+{
+
+    width: 100%;
+    min-height: 300px;
+
+    text-align: center;
+}
+
+.logo h2
+{
+    font-family: Bahn;
+    font-weight: 100;
+    font-size: 2.5em;
+}
+
+
+.form-input
+
+{
+    width: 100%;
+    min-height: 300px;
+
+    padding-top: 30px;
+}
+
+.form-input ul
+{
+    width: 80%;
+    padding: 30px;
+    background: white;
+    margin: 0 auto;
+    border-radius: 10px;
+
+}
+
+.form-input li
+{
+    width: 100%;
+    height: 35px;
+    margin-bottom: 15px;
+    list-style: none;
+}
+
+.form-input input[type=text],.form-input input[type=password]
+{
+    background: none;
+    border: none;
+    width: 100%;
+    height: 35px;
+    border-bottom: 1px solid black;
+    padding-left: 3px;
+    outline: none;
+}
+
+.form-input input::placeholder
+{
+    font-size: 17px;
+    font-family: Bahn;
+    color: darkgrey;
+}
+
+.form-input input[type=submit]
+{
+    border: none;
+    background: cornflowerblue;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+
+}
+
+.form-input li:nth-child(3)
+{
+    margin-top: 40px;
+    text-align: center;
+
+}
+
+
+
+
+
+

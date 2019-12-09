@@ -36,18 +36,19 @@ if (array_key_exists($sectionsKey, $routes)) {
     $class = $arr[0];
     $method = $arr[1];
 
+    if (file_exists(_ROOT.$file)) {
+
+        require_once _ROOT.$file;
+
+        if (class_exists($class) && method_exists($class, $method)) {
+            $temp =  new $class;
+            $html = $temp->$method();
+        }
+    }
+
 }else {
     echo "error 404 page not found";
 }
 
 
 
-if (file_exists(_ROOT.$file)) {
-
-    require_once _ROOT.$file;
-
-    if (class_exists($class) && method_exists($class, $method)) {
-        $temp =  new $class;
-        $html = $temp->$method();
-    }
-}

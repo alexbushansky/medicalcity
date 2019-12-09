@@ -1,9 +1,11 @@
 <?php
 
+namespace core\config;
+
 class DB
 {
-    protected function connect()
+    protected static function connect()
     {
-        return new PDO("mysql:host=127.0.0.1;dbname=medicalcity", "root","");
+        return new \PDO("mysql:host=".$_ENV['host'].";dbname=".$_ENV['dbname'], $_ENV["name"],$_ENV["password"]);
     }
 }

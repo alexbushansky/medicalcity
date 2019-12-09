@@ -1,5 +1,6 @@
 <?php
-
+session_start();
+ob_start();
 require_once "core/config/path.php";
 require_once "vendor/autoload.php";
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
@@ -16,4 +17,3 @@ require_once _ROUTER."Router.php";
 
 echo $html;
 
-print_r($_ENV);
