@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 ob_start();
 require_once "core/config/path.php";
@@ -14,6 +15,9 @@ require_once _GLOBAL."GlobalController.php";
 
 require_once _CONFIG."Routes.php";
 require_once _ROUTER."Router.php";
+
+setcookie('auth',0,time()-3600,"/");
+unset($_SESSION['user']);
 
 echo $html;
 
