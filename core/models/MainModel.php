@@ -31,7 +31,7 @@ class MainModel extends DB
                             $pdo3->bindParam(1,$arr["id_user"]);
                             $pdo3->execute();
                             $arrUser = $pdo3->fetch(\PDO::FETCH_ASSOC);
-                              setcookie("auth",true,time()+3600,"/");
+                              setcookie("auth",true,time()+36000,"/");
                               $_SESSION['user']['id'] = $arr['id'];
                               $_SESSION['user']['login'] = $arr['login'];
                               $_SESSION['user']['role'] = $arr['role'];
@@ -44,11 +44,11 @@ class MainModel extends DB
 
                        case 2:
                            $pdo3 = $pdo->prepare("SELECT *, p.name as prof FROM staff s LEFT JOIN 
-                            proffesionals p ON s.id_prof=p.id WHERE s.id = ? WHERE s.id=?");
+                            proffesionals p ON s.id_prof=p.id WHERE s.id = ?");
                            $pdo3->bindParam(1,$arr["id_user"]);
                            $pdo3->execute();
                            $arrUser = $pdo3->fetch(\PDO::FETCH_ASSOC);
-                           setcookie("auth",true,time()+3600,"/");
+                           setcookie("auth",true,time()+36000,"/");
                            $_SESSION['user']['id'] = $arr['id'];
                            $_SESSION['user']['login'] = $arr['login'];
                            $_SESSION['user']['role'] = $arr['role'];
@@ -64,7 +64,7 @@ class MainModel extends DB
                            $pdo3->bindParam(1,$arr["id_user"]);
                            $pdo3->execute();
                            $arrUser = $pdo3->fetch(\PDO::FETCH_ASSOC);
-                           setcookie("auth",true,time()+3600,"/");
+                           setcookie("auth",true,time()+36000,"/");
                            $_SESSION['user']['id'] = $arr['id'];
                            $_SESSION['user']['login'] = $arr['login'];
                            $_SESSION['user']['role'] = $arr['role'];

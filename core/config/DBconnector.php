@@ -2,10 +2,19 @@
 
 namespace core\config;
 
+use mysql_xdevapi\Exception;
+
 class DB
 {
     protected static function connect()
     {
-        return new \PDO("mysql:host=".$_ENV['host'].";dbname=".$_ENV['dbname'], $_ENV["name"],$_ENV["password"]);
+        try {
+            $pdo = new \PDO("mysql:host=127.0.0.1;dbname=medicalcity", "root", "");
+            $pdo->setAttribute(\PDO::ATTR_ERRMODE,\PDO::ERRMODE_EXCEPTION);
+            return $pdo;
+        }catch (\PDOException $e)
+        {
+            echo $e->getMessage();
+        }
     }
 }

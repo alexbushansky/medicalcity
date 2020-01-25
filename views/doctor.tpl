@@ -1,21 +1,30 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light nav-block">
+
         <a class="navbar-brand" href="#"><img src="/views/img/logo.png" width="100px"  height="80px"></a>
-        <div class="col-lg-4">
-            Здраствуй,user
+
+        <div >
+            Здравствуй, {{get|raw}}
         </div>
-        <div class="col-lg-4">
+        <div class="head-center">
            <h2><strong>Кабинет врача</strong></h2>
         </div>
-        <div class="col-lg-4">
+
+        <div class="head-left">
             <div class="row">
-             <div class="col-lg-3">
+
+             <div class="col-lg-6">
             <img src="/views/img/avatar.png" height="80px" width="80px">
              </div>
-                <div  class="col-lg-3">
+
+                <div  class="col-lg-6">
                 <a href="#">Ваш кабинет</a>
-                <a href="#">Выход</a>
+
+                <a href="/main/logout">Выход</a>
                 </div>
+            </div>
+        </div>
+
         </div>
 
     </nav>

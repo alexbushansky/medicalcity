@@ -19,19 +19,19 @@ class MainController extends GlobalController
 
            if($_SESSION['user']['role']==1) {
 
-               $html .= $this->gettwig()->render("doctor.tpl");
+               $html .= $this->gettwig()->render("doctor.tpl",["get"=>$_SESSION['user']['first_name']]);
 
            }
            else if ($_SESSION['user']['role']==2)
            {
 
-               $html .= $this->gettwig()->render("staff.tpl");
+               $html .= $this->gettwig()->render("staff.tpl",["get"=>$_SESSION['user']['first_name']]);
 
            }
            else if($_SESSION['user']['role']==3)
            {
 
-               $html .= $this->gettwig()->render("patient.tpl");
+               $html .= $this->gettwig()->render("patient.tpl",["get"=>$_SESSION['user']['first_name']]);
 
            }
 
@@ -61,12 +61,20 @@ class MainController extends GlobalController
            {
                header("location: /");
            }
+           else
+           {
+               header("location: /");
+           }
         }
     }
 
-
-
-
-
-
+    public function userOut()
+    {
+        if(isset($_SESSION['user']) && isset($_COOKIE['auth']) && $_COOKIE['auth']) {
+            setcookie('auth', 0, time() - 36000, "/");
+            unset($_SESSION['user']);
+            header("location: /");
+            exit();
+        }
+    }
 }
